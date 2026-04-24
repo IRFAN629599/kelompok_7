@@ -1,52 +1,95 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Pro Dashboard</title>
 </head>
 <body>
-    <div class="container">
-        <div class="nav">
-            <h2>Daftar Tugas</h2>
-            <a href="profile.html"> Profil</a>
-        </div>
 
-        
-        <div style="display:flex; gap:10px; margin-bottom:20px;">
-            <input type="text" placeholder="Nama tugas baru" style="margin:0;">
-            <button class="btn" style="width:auto;">Tambah</button>
-        </div>
+<div class="layout">
 
-        
-        <div class="task-item">
-            <div class="task-info">
-                <h3>PR Matematika Bab 5</h3>
-                <span class="deadline">⏰ Deadline: 25 Apr 2026</span>
-            </div>
-            <a href="#" class="delete-btn">Hapus</a>
-        </div>
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>⚡ ToDoPro</h2>
 
-       
-        <div class="task-item">
-            <div class="task-info">
-                <h3>Presentasi Bahasa Inggris</h3>
-                <span class="deadline">⏰ Deadline: 28 Apr 2026</span>
-            </div>
-            <a href="#" class="delete-btn">Hapus</a>
-        </div>
+    <a href="#">📊 Dashboard</a>
+    <a href="#">➕ Tambah Task</a>
+    <a href="#">👤 Profil</a>
+    <a href="#">🚪 Logout</a>
 
-       
-        <div class="task-item">
-            <div class="task-info">
-                <h3>Latihan Coding HTML</h3>
-                <span class="deadline">⏰ Deadline: 30 Apr 2026</span>
-            </div>
-            <a href="#" class="delete-btn">Hapus</a>
-        </div>
+    <button class="dark-btn" onclick="toggleDark()">🌙 Dark Mode</button>
+  </div>
 
-        <a href="#" class="add-btn">+</a>
+  <!-- MAIN -->
+  <div class="main">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <h2>Dashboard</h2>
+      <div class="user">👋 Hi, User</div>
     </div>
+
+    <!-- STATS -->
+    <div class="stats">
+
+      <div class="card stat">
+        <h3>10</h3>
+        <p>Total Task</p>
+      </div>
+
+      <div class="card stat green">
+        <h3>6</h3>
+        <p>Done</p>
+      </div>
+
+      <div class="card stat orange">
+        <h3>4</h3>
+        <p>Pending</p>
+      </div>
+
+    </div>
+
+    <!-- TASKS -->
+    <h3>Task List</h3>
+
+    <div class="task-grid">
+
+      <div class="task-card pending">
+        <h3>Belajar HTML</h3>
+        <p>Deadline: Hari ini</p>
+        <div class="actions">
+          <button class="done">✔ Done</button>
+          <button class="delete">🗑</button>
+        </div>
+      </div>
+
+      <div class="task-card done">
+        <h3>Push GitHub</h3>
+        <p>Completed</p>
+        <div class="actions">
+          <button class="delete">🗑</button>
+        </div>
+      </div>
+
+      <div class="task-card pending">
+        <h3>Buat Project PHP</h3>
+        <p>Deadline: Besok</p>
+        <div class="actions">
+          <button class="done">✔ Done</button>
+          <button class="delete">🗑</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<script>
+function toggleDark(){
+  document.body.classList.toggle("dark");
+}
+</script>
+
 </body>
 </html>
